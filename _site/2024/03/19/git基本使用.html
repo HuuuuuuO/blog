@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<h1 id="git基本使用">git基本使用</h1>
+
+<p>Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。</p>
+
+<p><img src="git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.assets/v2-3bc9d5f2c49a713c776e69676d7d56c5_r.png" alt="v2-3bc9d5f2c49a713c776e69676d7d56c5_r"></p>
+
+<p>index：暂存区</p>
+
+<p>workspace：工作区</p>
+
+<p>respository：本地仓库</p>
+
+<p>remote：远程仓库</p>
+
+<hr>
+
+<h2 id="一个完整的简单的git推送流程">一个完整的简单的git推送流程</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+git init
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+git commit -m “update”
+git push -u origin main
+</code></pre></div></div>
+
+<hr>
+
+<p>以下是Git的基本操作：</p>
+
+<h2 id="创建仓库">创建仓库</h2>
+
+<ul>
+  <li>
+<strong>初始化仓库</strong>：<code class="language-plaintext highlighter-rouge">git init</code> 用于在当前目录下创建一个新的Git仓库。</li>
+  <li>
+<strong>克隆仓库</strong>：<code class="language-plaintext highlighter-rouge">git clone &lt;repository&gt;</code> 用于从远程仓库克隆一个项目到本地。</li>
+</ul>
+
+<h2 id="基本操作">基本操作</h2>
+
+<ul>
+  <li>
+<strong>添加文件到暂存区</strong>：<code class="language-plaintext highlighter-rouge">git add &lt;file&gt;</code> 或 <code class="language-plaintext highlighter-rouge">git add .</code>（添加所有文件）。</li>
+  <li>
+<strong>提交更改</strong>：<code class="language-plaintext highlighter-rouge">git commit -m "commit message"</code> 将暂存区的更改提交到本地仓库。</li>
+  <li>
+<strong>查看状态</strong>：<code class="language-plaintext highlighter-rouge">git status</code> 显示工作区和暂存区的状态。</li>
+  <li>
+<strong>查看差异</strong>：<code class="language-plaintext highlighter-rouge">git diff</code> 显示工作区与暂存区的差异。</li>
+  <li>
+<strong>查看提交历史</strong>：<code class="language-plaintext highlighter-rouge">git log</code> 显示提交历史。</li>
+</ul>
+
+<h2 id="分支与合并">分支与合并</h2>
+
+<ul>
+  <li>
+<strong>创建分支</strong>：<code class="language-plaintext highlighter-rouge">git branch &lt;branch-name&gt;</code> 创建一个新分支。</li>
+  <li>
+<strong>切换分支</strong>：<code class="language-plaintext highlighter-rouge">git checkout &lt;branch-name&gt;</code> 切换到指定分支。</li>
+  <li>
+<strong>合并分支</strong>：<code class="language-plaintext highlighter-rouge">git merge &lt;branch-name&gt;</code> 将指定分支合并到当前分支。</li>
+</ul>
+
+<h2 id="远程仓库操作">远程仓库操作</h2>
+
+<ul>
+  <li>
+<strong>添加远程仓库</strong>：<code class="language-plaintext highlighter-rouge">git remote add &lt;remote-name&gt; &lt;repository&gt;</code> 添加远程仓库。</li>
+  <li>
+<strong>推送到远程仓库</strong>：<code class="language-plaintext highlighter-rouge">git push &lt;remote-name&gt; &lt;branch-name&gt;</code> 将本地分支推送到远程仓库。</li>
+  <li>
+<strong>从远程仓库拉取</strong>：<code class="language-plaintext highlighter-rouge">git pull &lt;remote-name&gt; &lt;branch-name&gt;</code> 从远程仓库拉取指定分支的更改。</li>
+</ul>
+
+<h2 id="配置git">配置Git</h2>
+
+<ul>
+  <li>
+<strong>配置用户信息</strong>：<code class="language-plaintext highlighter-rouge">git config --global user.name "your name"</code> 和 <code class="language-plaintext highlighter-rouge">git config --global user.email "youremail@example.com"</code> 设置全局用户名和邮箱。</li>
+  <li>
+<strong>配置差异分析工具</strong>：<code class="language-plaintext highlighter-rouge">git config --global merge.tool vimdiff</code> 设置差异分析工具。</li>
+  <li>
+<strong>配置彩色输出</strong>：<code class="language-plaintext highlighter-rouge">git config --global color.ui auto</code> 配置Git命令输出为彩色。</li>
+</ul>
+
+<h2 id="其他操作">其他操作</h2>
+
+<ul>
+  <li>
+<strong>删除文件</strong>：<code class="language-plaintext highlighter-rouge">git rm &lt;file&gt;</code> 从工作区和暂存区删除文件。</li>
+  <li>
+<strong>重命名文件</strong>：<code class="language-plaintext highlighter-rouge">git mv &lt;old-name&gt; &lt;new-name&gt;</code> 在工作区和暂存区中重命名文件。</li>
+  <li>
+<strong>查看未跟踪文件</strong>：<code class="language-plaintext highlighter-rouge">git status --ignored</code> 显示未跟踪的文件。</li>
+</ul>
+
+<h2 id="高级操作">高级操作</h2>
+
+<ul>
+  <li>
+<strong>撤销提交</strong>：<code class="language-plaintext highlighter-rouge">git revert &lt;commit&gt;</code> 撤销指定提交。</li>
+  <li>
+<strong>重置到指定提交</strong>：<code class="language-plaintext highlighter-rouge">git reset --hard &lt;commit&gt;</code> 将当前分支重置到指定提交。</li>
+  <li>
+<strong>查看差异</strong>：<code class="language-plaintext highlighter-rouge">git diff &lt;commit1&gt;..&lt;commit2&gt;</code> 查看两个提交之间的差异。</li>
+</ul>
+
+<p>这些是Git的基本操作，可以帮助你更好地管理项目的版本控制。</p>
+</body></html>

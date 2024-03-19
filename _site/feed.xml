@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-19T19:39:17+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>GitHub User</name></author><entry><title type="html">博客搭建：jekyll + github pages</title><link href="http://localhost:4000/2024/03/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Jekyll-+-Github-Pages.html" rel="alternate" type="text/html" title="博客搭建：jekyll + github pages" /><published>2024-03-19T00:00:00+08:00</published><updated>2024-03-19T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%9AJekyll%20+%20Github%20Pages</id><content type="html" xml:base="http://localhost:4000/2024/03/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Jekyll-+-Github-Pages.html"><![CDATA[<h1 id="博客搭建jekyll--github-pages">博客搭建：Jekyll + Github Pages</h1>
+
+<p>Jekyll就是将纯文本转化为静态博客网站，不需要数据库支持，也没有评论功能，想要评论功能的话可以借助第三方的评论服务。
+Jekyll + Github Pages可以让你更加专注于博客内容，而不是如何搭建一个博客平台。</p>
+
+<h2 id="1安装ruby">1、安装ruby</h2>
+
+<p>下载ruby+devkit</p>
+
+<p>https://rubyinstaller.org/downloads/</p>
+
+<p><img src="博客搭建：Jekyll + Github Pages.assets/image-20240319151436318.png" alt="image-20240319151436318" /></p>
+
+<p>这一步出现了很多问题，最后的解决方法是，卸载，重装，==<strong>ruby的默认安装地址不要变</strong>==！</p>
+
+<p>验证：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
+
+gem -v
+</code></pre></div></div>
+
+<p>然后安装 jekyll ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+gem sources -l
+
+gem install jekyll
+gem install jekyll-paginate
+jekyll -v
+</code></pre></div></div>
+
+<p>再安装 bundler ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div></div>]]></content><author><name>GitHub User</name></author><summary type="html"><![CDATA[博客搭建：Jekyll + Github Pages]]></summary></entry><entry><title type="html">Welcome To Jekyll</title><link href="http://localhost:4000/2024/03/19/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome To Jekyll" /><published>2024-03-19T00:00:00+08:00</published><updated>2024-03-19T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/19/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2024/03/19/welcome-to-jekyll.html"><![CDATA[<p>cd—
+layout: post
+title:  “Welcome to Jekyll!”
+date:   2024-03-19 18:08:13 +0800
+categories: jekyll update
+—
+You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>GitHub User</name></author><summary type="html"><![CDATA[cd— layout: post title: “Welcome to Jekyll!” date: 2024-03-19 18:08:13 +0800 categories: jekyll update — You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Typora快捷键</title><link href="http://localhost:4000/2024/03/19/typora%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="Typora快捷键" /><published>2024-03-19T00:00:00+08:00</published><updated>2024-03-19T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/19/typora%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="http://localhost:4000/2024/03/19/typora%E5%BF%AB%E6%8D%B7%E9%94%AE.html"><![CDATA[<h1 id="typora快捷键">typora快捷键</h1>
+
+<p>本地编辑md我用的是typora，用一些快捷键会更好用</p>
+
+<h2 id="设置标题">设置标题</h2>
+
+<p><strong>ctrl + 1 ~6 标题1~6 等同于</strong>
+<strong>一级标题：#+空格+标题内容</strong>
+<strong>二级标题：##+空格+标题内容</strong>
+<strong>最多六级标题</strong></p>
+
+<p>正文：ctrl + 0</p>
+
+<h2 id="选中">选中</h2>
+
+<p>选中一整行：ctrl+L</p>
+
+<p>选中单词：ctrl+d</p>
+
+<p>选中相同格式的文字：ctrl+e</p>
+
+<h2 id="搜索替换">搜索替换</h2>
+
+<p>搜索：ctrl+f</p>
+
+<p>替换：ctrl+h</p>
+
+<h2 id="编辑格式">编辑格式</h2>
+
+<p>加粗：ctrl+b</p>
+
+<p>倾斜：ctrl+i</p>
+
+<p>下划线：<code class="language-plaintext highlighter-rouge">ctrl+u</code></p>
+
+<p>代码块：<code class="language-plaintext highlighter-rouge">ctrl+alt+f</code></p>
+
+<p>删除线：<code class="language-plaintext highlighter-rouge">alt+shift+5 或 ～～内容～～</code></p>
+
+<p>分割线：<code class="language-plaintext highlighter-rouge">- - - 或***</code></p>
+
+<p>切换编辑语法模式/预览模式：<code class="language-plaintext highlighter-rouge">ctrl + / </code></p>
+
+<p>引用：<code class="language-plaintext highlighter-rouge">&gt;+空格</code></p>
+
+<h2 id="插入">插入</h2>
+
+<p>插入链接：ctrl+k</p>
+
+<p>插入目录：[toc] + enter</p>
+
+<p>插入图片：直接拖动到指定位置即可或者ctrl+shift+i</p>
+
+<p>插入表格：ctrl + T</p>
+
+<p>插入：<code class="language-plaintext highlighter-rouge">这个是使用的 </code> ``</p>]]></content><author><name>GitHub User</name></author><summary type="html"><![CDATA[typora快捷键]]></summary></entry><entry><title type="html">Git本地分支和远程分支冲突问题解决</title><link href="http://localhost:4000/2024/03/19/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3.html" rel="alternate" type="text/html" title="Git本地分支和远程分支冲突问题解决" /><published>2024-03-19T00:00:00+08:00</published><updated>2024-03-19T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/19/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3</id><content type="html" xml:base="http://localhost:4000/2024/03/19/git%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%86%B2%E7%AA%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3.html"><![CDATA[<h1 id="git本地分支和远程分支冲突问题解决">git本地分支和远程分支冲突问题解决</h1>
+
+<h2 id="1failed-to-push-some-refs-报错">1、failed to push some refs 报错</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -u origin main
+To https://github.com/xxxx.git
+ ! [rejected]        main -&gt; main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/xxxx.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre></div></div>
+
+<h3 id="解决方案">解决方案：</h3>
+
+<p>错误消息表明本地分支位于远程分支后面，并且 Git 阻止我推送更改以避免覆盖远程更改。如果其他人已将提交推送到本地没有的远程分支，则可能会出现这种情况。若要解决此问题，需要先将远程更改集成到本地分支中，然后才能推送更改。以下是步骤：</p>
+
+<h4 id="1fetch-the-remote-changes">1.<strong>Fetch the Remote Changes</strong>:</h4>
+
+<p>First, you need to fetch the changes from the remote repository without merging them into your local branch. This ensures that you have the latest changes from the remote repository but keeps your local branch unchanged.
+获取远程更改：首先，你需要从远程存储库获取更改，而无需将它们合并到本地分支中。这可确保你拥有来自远程存储库的最新更改，但保持本地分支不变。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch origin
+</code></pre></div></div>
+
+<h4 id="2merge-or-rebase">2.<strong>Merge or Rebase</strong>:</h4>
+
+<p>After fetching the changes, you have two main options to integrate the remote changes into your local branch:
+合并或变基：获取更改后，你有两个主要选项将远程更改集成到本地分支中：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **Merge**: This will create a new merge commit in your local branch that combines your changes with the changes from the remote branch.
+git merge origin/main
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Rebase</strong>:</li>
+  <li>This will replay your local commits on top of the remote changes, creating a linear history. This is a cleaner approach but can be more complex if there are conflicts.
+变基：这将在远程更改之上重放你的本地提交，从而创建线性历史记录。这是一种更简洁的方法，但如果存在冲突，可能会更复杂。</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git rebase origin/main
+</code></pre></div></div>
+
+<p>If you choose to rebase and encounter conflicts, you’ll need to resolve them manually. After resolving conflicts, continue the rebase with <code class="language-plaintext highlighter-rouge">git rebase --continue</code>.
+如果选择变基并遇到冲突，则需要手动解决它们。解决冲突后，继续使用 <code class="language-plaintext highlighter-rouge">git rebase --continue</code> .</p>
+
+<h4 id="3push-your-changes">3.<strong>Push Your Changes</strong>:</h4>
+
+<p>Once you’ve integrated the remote changes into your local branch, you can push your changes to the remote repository. If you’ve rebased, you might need to force push, but be cautious as this can overwrite history on the remote repository.
+推送更改：将远程更改集成到本地分支后，可以将更改推送到远程存储库。如果已变基，则可能需要强制推送，但要小心，因为这可能会覆盖远程存储库上的历史记录。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin main
+</code></pre></div></div>
+
+<p>If you’ve merged and there are no conflicts, a simple push should work. If you’ve rebased and need to force push, use:
+如果已合并并且没有冲突，则简单的推送应该可以工作。如果你已重新定位并需要强制推送，请使用：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -f origin main
+</code></pre></div></div>
+
+<p>Remember, force pushing (<code class="language-plaintext highlighter-rouge">git push -f</code>) should be used with caution, especially in shared repositories, as it can overwrite history and potentially cause issues for other collaborators. Always communicate with your team before force pushing.
+请记住，应谨慎使用强制推送 （ <code class="language-plaintext highlighter-rouge">git push -f</code> ），尤其是在共享存储库中，因为它可能会覆盖历史记录并可能给其他协作者带来问题。在强制推动之前，请务必与你的团队沟通。</p>
+
+<hr />
+
+<h2 id="2empty-reply-from-server报错-or-timed-out报错">2、Empty reply from server报错 or Timed out报错</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push -u origin main
+fatal: unable to access 'https://github.com/HuuuuuuO/blog.git/': Empty reply from server
+</code></pre></div></div>
+
+<p>或者为：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push -f origin main
+fatal: unable to access 'https://github.com/HuuuuuuO/blog.git/': Failed to connect to github.com port 443: Timed out
+</code></pre></div></div>
+
+<h3 id="解决方案-1">解决方案：</h3>
+
+<h4 id="1检查-ssh-访问">1.检查 SSH 访问：</h4>
+
+<p>如果使用 SSH 连接到 GitHub，请确保将 SSH 密钥正确添加到 GitHub 帐户。您可以使用命令 <code class="language-plaintext highlighter-rouge">ssh -T git@github.com</code> 测试 SSH 连接。如果您收到成功的身份验证消息，则您的 SSH 设置是正确的。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+
+<h4 id="2使用-ssh-而不是-https">2.使用 SSH 而不是 HTTPS：</h4>
+
+<p>如果当前使用 HTTPS 推送到 GitHub，请尝试切换到 SSH。这有时可以绕过与 HTTPS 连接相关的问题。您可以将远程 URL 更改为通过命令 <code class="language-plaintext highlighter-rouge">git remote set-url origin git@github.com:HuuuuuuO/blog.git</code> 使用 SSH。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`git remote set-url origin git@github.com:HuuuuuuO/blog.git`
+</code></pre></div></div>
+
+<h4 id="3进行push">3.进行push</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin main
+</code></pre></div></div>
+
+<p>成功。</p>]]></content><author><name>GitHub User</name></author><summary type="html"><![CDATA[git本地分支和远程分支冲突问题解决]]></summary></entry><entry><title type="html">Git基本使用</title><link href="http://localhost:4000/2024/03/19/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html" rel="alternate" type="text/html" title="Git基本使用" /><published>2024-03-19T00:00:00+08:00</published><updated>2024-03-19T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/19/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8</id><content type="html" xml:base="http://localhost:4000/2024/03/19/git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html"><![CDATA[<h1 id="git基本使用">git基本使用</h1>
+
+<p>Git是一个分布式版本控制系统，用于跟踪文件的更改，协作开发，以及管理项目的版本。</p>
+
+<p><img src="git基本使用.assets/v2-3bc9d5f2c49a713c776e69676d7d56c5_r.png" alt="v2-3bc9d5f2c49a713c776e69676d7d56c5_r" /></p>
+
+<p>index：暂存区</p>
+
+<p>workspace：工作区</p>
+
+<p>respository：本地仓库</p>
+
+<p>remote：远程仓库</p>
+
+<hr />
+
+<h2 id="一个完整的简单的git推送流程">一个完整的简单的git推送流程</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+git init
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+git commit -m “update”
+git push -u origin main
+</code></pre></div></div>
+
+<hr />
+
+<p>以下是Git的基本操作：</p>
+
+<h2 id="创建仓库">创建仓库</h2>
+
+<ul>
+  <li><strong>初始化仓库</strong>：<code class="language-plaintext highlighter-rouge">git init</code> 用于在当前目录下创建一个新的Git仓库。</li>
+  <li><strong>克隆仓库</strong>：<code class="language-plaintext highlighter-rouge">git clone &lt;repository&gt;</code> 用于从远程仓库克隆一个项目到本地。</li>
+</ul>
+
+<h2 id="基本操作">基本操作</h2>
+
+<ul>
+  <li><strong>添加文件到暂存区</strong>：<code class="language-plaintext highlighter-rouge">git add &lt;file&gt;</code> 或 <code class="language-plaintext highlighter-rouge">git add .</code>（添加所有文件）。</li>
+  <li><strong>提交更改</strong>：<code class="language-plaintext highlighter-rouge">git commit -m "commit message"</code> 将暂存区的更改提交到本地仓库。</li>
+  <li><strong>查看状态</strong>：<code class="language-plaintext highlighter-rouge">git status</code> 显示工作区和暂存区的状态。</li>
+  <li><strong>查看差异</strong>：<code class="language-plaintext highlighter-rouge">git diff</code> 显示工作区与暂存区的差异。</li>
+  <li><strong>查看提交历史</strong>：<code class="language-plaintext highlighter-rouge">git log</code> 显示提交历史。</li>
+</ul>
+
+<h2 id="分支与合并">分支与合并</h2>
+
+<ul>
+  <li><strong>创建分支</strong>：<code class="language-plaintext highlighter-rouge">git branch &lt;branch-name&gt;</code> 创建一个新分支。</li>
+  <li><strong>切换分支</strong>：<code class="language-plaintext highlighter-rouge">git checkout &lt;branch-name&gt;</code> 切换到指定分支。</li>
+  <li><strong>合并分支</strong>：<code class="language-plaintext highlighter-rouge">git merge &lt;branch-name&gt;</code> 将指定分支合并到当前分支。</li>
+</ul>
+
+<h2 id="远程仓库操作">远程仓库操作</h2>
+
+<ul>
+  <li><strong>添加远程仓库</strong>：<code class="language-plaintext highlighter-rouge">git remote add &lt;remote-name&gt; &lt;repository&gt;</code> 添加远程仓库。</li>
+  <li><strong>推送到远程仓库</strong>：<code class="language-plaintext highlighter-rouge">git push &lt;remote-name&gt; &lt;branch-name&gt;</code> 将本地分支推送到远程仓库。</li>
+  <li><strong>从远程仓库拉取</strong>：<code class="language-plaintext highlighter-rouge">git pull &lt;remote-name&gt; &lt;branch-name&gt;</code> 从远程仓库拉取指定分支的更改。</li>
+</ul>
+
+<h2 id="配置git">配置Git</h2>
+
+<ul>
+  <li><strong>配置用户信息</strong>：<code class="language-plaintext highlighter-rouge">git config --global user.name "your name"</code> 和 <code class="language-plaintext highlighter-rouge">git config --global user.email "youremail@example.com"</code> 设置全局用户名和邮箱。</li>
+  <li><strong>配置差异分析工具</strong>：<code class="language-plaintext highlighter-rouge">git config --global merge.tool vimdiff</code> 设置差异分析工具。</li>
+  <li><strong>配置彩色输出</strong>：<code class="language-plaintext highlighter-rouge">git config --global color.ui auto</code> 配置Git命令输出为彩色。</li>
+</ul>
+
+<h2 id="其他操作">其他操作</h2>
+
+<ul>
+  <li><strong>删除文件</strong>：<code class="language-plaintext highlighter-rouge">git rm &lt;file&gt;</code> 从工作区和暂存区删除文件。</li>
+  <li><strong>重命名文件</strong>：<code class="language-plaintext highlighter-rouge">git mv &lt;old-name&gt; &lt;new-name&gt;</code> 在工作区和暂存区中重命名文件。</li>
+  <li><strong>查看未跟踪文件</strong>：<code class="language-plaintext highlighter-rouge">git status --ignored</code> 显示未跟踪的文件。</li>
+</ul>
+
+<h2 id="高级操作">高级操作</h2>
+
+<ul>
+  <li><strong>撤销提交</strong>：<code class="language-plaintext highlighter-rouge">git revert &lt;commit&gt;</code> 撤销指定提交。</li>
+  <li><strong>重置到指定提交</strong>：<code class="language-plaintext highlighter-rouge">git reset --hard &lt;commit&gt;</code> 将当前分支重置到指定提交。</li>
+  <li><strong>查看差异</strong>：<code class="language-plaintext highlighter-rouge">git diff &lt;commit1&gt;..&lt;commit2&gt;</code> 查看两个提交之间的差异。</li>
+</ul>
+
+<p>这些是Git的基本操作，可以帮助你更好地管理项目的版本控制。</p>]]></content><author><name>GitHub User</name></author><summary type="html"><![CDATA[git基本使用]]></summary></entry><entry><title type="html">Readme</title><link href="http://localhost:4000/2024/03/19/README.html" rel="alternate" type="text/html" title="Readme" /><published>2024-03-19T00:00:00+08:00</published><updated>2024-03-19T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/19/README</id><content type="html" xml:base="http://localhost:4000/2024/03/19/README.html"><![CDATA[<h1 id="说明">说明</h1>
+
+<p>写字的地方</p>]]></content><author><name>GitHub User</name></author><summary type="html"><![CDATA[说明]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-12-07T00:00:00+08:00</published><updated>2018-12-07T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<h2 id="section-1">section 1</h2>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<h2 id="section-2">section 2</h2>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+<p>$ a * b = c ^ b $</p>
+
+<p>$ 2^{\frac{n-1}{3}} $</p>
+
+<p>$ \int_a^b f(x)\,dx. $</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello World!"</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// prints 'Hi, Tom' to STDOUT.</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">John</span><span class="sh">"</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">age</span><span class="p">)</span>
+</code></pre></div></div>]]></content><author><name>Jeffrey</name></author><category term="jekyll" /><category term="jekyll" /><category term="theme" /><category term="yat" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">An exhibit of Markdown</title><link href="http://localhost:4000/markdown/2018/12/05/an-exhibit-of-markdown.html" rel="alternate" type="text/html" title="An exhibit of Markdown" /><published>2018-12-05T00:00:00+08:00</published><updated>2018-12-05T00:00:00+08:00</updated><id>http://localhost:4000/markdown/2018/12/05/an-exhibit-of-markdown</id><content type="html" xml:base="http://localhost:4000/markdown/2018/12/05/an-exhibit-of-markdown.html"><![CDATA[<p>This note demonstrates some of what <a href="https://daringfireball.net/projects/markdown/">Markdown</a> is capable of doing.</p>
+
+<h2 id="an-exhibit-of-markdown">An exhibit of Markdown</h2>
+
+<p><em>Note: Feel free to play with this page. Unlike regular notes, this doesn’t automatically save itself.</em></p>
+
+<h2 id="basic-formatting">Basic formatting</h2>
+
+<p>Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</p>
+
+<p>Paragraphs must be separated by a blank line. Basic formatting of <em>italics</em> and <strong>bold</strong> is supported. This <em>can be <strong>nested</strong> like</em> so.</p>
+
+<h2 id="lists">Lists</h2>
+
+<h3 id="ordered-list">Ordered list</h3>
+
+<ol>
+  <li>Item 1</li>
+  <li>A second item</li>
+  <li>Number 3</li>
+  <li>Ⅳ</li>
+</ol>
+
+<p><em>Note: the fourth item uses the Unicode character for <a href="https://www.fileformat.info/info/unicode/char/2163/index.htm">Roman numeral four</a>.</em></p>
+
+<h3 id="unordered-list">Unordered list</h3>
+
+<ul>
+  <li>An item</li>
+  <li>Another item</li>
+  <li>Yet another item</li>
+  <li>And there’s more…</li>
+</ul>
+
+<h2 id="paragraph-modifiers">Paragraph modifiers</h2>
+
+<h3 id="code-block">Code block</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Code blocks are very useful for developers and other people who look at code or other things that are written in plain text. As you can see, it uses a fixed-width font.
+</code></pre></div></div>
+
+<p>You can also make <code class="language-plaintext highlighter-rouge">inline code</code> to add code into other things.</p>
+
+<h3 id="quote">Quote</h3>
+
+<blockquote>
+  <p>Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.</p>
+</blockquote>
+
+<h2 id="headings">Headings</h2>
+
+<p>There are six levels of headings. They correspond with the six levels of HTML headings. You’ve probably noticed them already in the page. Each level down uses one more hash character.</p>
+
+<h3 id="headings-can-also-contain-formatting">Headings <em>can</em> also contain <strong>formatting</strong></h3>
+
+<h3 id="they-can-even-contain-inline-code">They can even contain <code class="language-plaintext highlighter-rouge">inline code</code></h3>
+
+<p>Of course, demonstrating what headings look like messes up the structure of the page.</p>
+
+<p>I don’t recommend using more than three or four levels of headings here, because, when you’re smallest heading isn’t too small, and you’re largest heading isn’t too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.</p>
+
+<h2 id="urls">URLs</h2>
+
+<p>URLs can be made in a handful of ways:</p>
+
+<ul>
+  <li>A named link to <a href="https://www.markitdown.net/">MarkItDown</a>. The easiest way to do these is to select what you want to make a link and hit <code class="language-plaintext highlighter-rouge">Ctrl+L</code>.</li>
+  <li>Another named link to <a href="https://www.markitdown.net/">MarkItDown</a></li>
+  <li>Sometimes you just want a URL like <a href="https://www.markitdown.net/">https://www.markitdown.net/</a>.</li>
+</ul>
+
+<h2 id="horizontal-rule">Horizontal rule</h2>
+
+<p>A horizontal rule is a line that goes across the middle of the page.</p>
+
+<hr />
+
+<p>It’s sometimes handy for breaking things up.</p>
+
+<h2 id="images">Images</h2>
+
+<p>Markdown can also contain images. I’ll need to add something here sometime.</p>
+
+<h2 id="finally">Finally</h2>
+
+<p>There’s actually a lot more to Markdown than this. See the official <a href="https://daringfireball.net/projects/markdown/basics">introduction</a> and <a href="https://daringfireball.net/projects/markdown/syntax">syntax</a> for more information. However, be aware that this is not using the official implementation, and this might work subtly differently in some of the little things.</p>]]></content><author><name>GitHub User</name></author><category term="markdown" /><category term="example" /><category term="markdown" /><summary type="html"><![CDATA[This note demonstrates some of what Markdown is capable of doing.]]></summary></entry><entry><title type="html">Mathjax Test</title><link href="http://localhost:4000/markdown/2018/05/26/mathjax-test.html" rel="alternate" type="text/html" title="Mathjax Test" /><published>2018-05-26T00:00:00+08:00</published><updated>2018-05-26T00:00:00+08:00</updated><id>http://localhost:4000/markdown/2018/05/26/mathjax-test</id><content type="html" xml:base="http://localhost:4000/markdown/2018/05/26/mathjax-test.html"><![CDATA[<ul>
+  <li>A safe integer is an integer that
+    <ul>
+      <li>can be exactly represented as an IEEE-754 double precision number, and</li>
+      <li>whose IEEE-75 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation</li>
+    </ul>
+  </li>
+  <li>For example, $ 2 ^ {53} - 1 $ is a safe integer,
+    <ul>
+      <li>it can be exactly represented</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>GitHub User</name></author><category term="markdown" /><category term="test" /><summary type="html"><![CDATA[A safe integer is an integer that can be exactly represented as an IEEE-754 double precision number, and whose IEEE-75 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation For example, $ 2 ^ {53} - 1 $ is a safe integer, it can be exactly represented]]></summary></entry><entry><title type="html">Video example</title><link href="http://localhost:4000/example/2017/12/18/video-example.html" rel="alternate" type="text/html" title="Video example" /><published>2017-12-18T00:00:00+08:00</published><updated>2017-12-18T00:00:00+08:00</updated><id>http://localhost:4000/example/2017/12/18/video-example</id><content type="html" xml:base="http://localhost:4000/example/2017/12/18/video-example.html"><![CDATA[<h2 id="canon-in-d-pachelbels-canon---cello--piano-best-wedding-version">Canon in D (Pachelbel’s Canon) - Cello &amp; Piano [BEST WEDDING VERSION]</h2>
+<p>Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make our own! We tried to stick as closely to the original as possible (which was written for three violins and basso continuo), and we performed it <em>not</em> at a snail’s pace so the bride can actually make it down the aisle without putting everyone to sleep. 🙊(Yeah, we said it! Nobody likes a slow processional!) Also, the number one complaint about this piece from cellists is always how booooring it is to play because they literally have to play the same 8 bass notes over and over for the entire piece. Problem solved with this arrangement because the cello never has to play the bass! 🙌(The piano does, but we get lots of other fun stuff too so it’s ok!) So for all you musicians out there playing weddings, we hope you enjoy playing this arrangement a little more than the ones you were used to…You can get it from www.musicnotes.com. 😊Be sure to let us know in the comments if you do!</p>
+
+<p><img src="//www.youtube.com/watch?v=Ptk_1Dc2iPY" alt="" /></p>
+
+<h2 id="gucci-hallucination--the-line-animation--gucci">GUCCI HALLUCINATION / THE LINE ANIMATION / GUCCI</h2>
+<p>BACKGROUND /</p>
+
+<p>Gucci share their creative vision through a series of surreal animated paintings by acclaimed artist Ignasi Monreal and The Line Animation studio. The animations make up part of a larger campaign shared via social media, above the line and print.</p>
+
+<p>APPROACH /</p>
+
+<p>Our aim was to ground and accentuate the outlandish scenarios with ambient sound design. Neither proclaiming to be positive or negative, the sound conveys a sense of the uncanny and leaves the audience with nothing but their own interpretations. their creative vision through a series of surreal animated paintings by acclaimed artist Ignasi Monreal and The Line Animation studio. The animations make up part of a larger campaign shared via social media, above the line and print.</p>
+
+<p><img src="https://vimeo.com/263856289" alt="" /></p>
+
+<h2 id="finneas-demos-how-he-builds-songs-for-billie-eilish">FINNEAS Demos How He Builds Songs For Billie Eilish</h2>
+<p>Grammy Award-winning musician and producer FINNEAS sits down with Pitchfork and closely examines his creative process while working on some of the biggest hit songs of the past couple years. FINNEAS explores the sounds that brought upon 
+some of his greatest musical breakthroughs in songs such as bad guy, bury a friend, ocean eyes, when the party’s over, I Lost a Friend, Used to This and much more.</p>
+
+<p><img src="https://dai.ly/x7tgcev" alt="" /></p>
+
+<h2 id="2019-bmw-vision-m-next-concept-hd">2019 BMW Vision M NEXT Concept (HD)</h2>
+
+<p>In future, drivers will be able to choose whether they wish to be driven or do the driving themselves. With the BMW Vision M NEXT, the BMW Group is revealing its take on how driving pleasure might look in future. It offers a foretaste of the BMW M brand’s electrified future by placing the focus squarely on the actively engaged driver. Intelligent technologies provide comprehensive yet carefully targeted assistance to turn them into the ultimate driver.</p>
+
+<p><img src="https://www.dailymotion.com/video/x7bur2y" alt="" /></p>
+
+<h2 id="this-is-the-poster-image">This is the poster image</h2>
+<p>In modern browsers, adding a video to your page is as easy as adding an image. No longer do you need to deal with special plug-ins or require crazy markup, you can do it with a single element.
+<img src="//www.html5rocks.com/en/tutorials/video/basics/devstories.webm" alt="video" /></p>]]></content><author><name>GitHub User</name></author><category term="example" /><category term="video" /><summary type="html"><![CDATA[Canon in D (Pachelbel’s Canon) - Cello &amp; Piano [BEST WEDDING VERSION] Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make our own! We tried to stick as closely to the original as possible (which was written for three violins and basso continuo), and we performed it not at a snail’s pace so the bride can actually make it down the aisle without putting everyone to sleep. 🙊(Yeah, we said it! Nobody likes a slow processional!) Also, the number one complaint about this piece from cellists is always how booooring it is to play because they literally have to play the same 8 bass notes over and over for the entire piece. Problem solved with this arrangement because the cello never has to play the bass! 🙌(The piano does, but we get lots of other fun stuff too so it’s ok!) So for all you musicians out there playing weddings, we hope you enjoy playing this arrangement a little more than the ones you were used to…You can get it from www.musicnotes.com. 😊Be sure to let us know in the comments if you do!]]></summary></entry></feed>
