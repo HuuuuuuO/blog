@@ -1,0 +1,33 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Tick</title>
+    <link>https://huuuuuuo.github.io/blog/</link>
+    <description>Tick</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language>
+      <atom:link href="https://huuuuuuo.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+  <title>Content Placeholder</title>
+  <link>https://huuuuuuo.github.io/blog/posts/content-placeholder/</link>
+  <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+  <author>作者</author>
+  <guid>https://huuuuuuo.github.io/blog/posts/content-placeholder/</guid>
+  <description><![CDATA[试试看看]]></description>
+</item>
+<item>
+  <title>Content Placeholder</title>
+  <link>https://huuuuuuo.github.io/blog/posts/content-placeholder/</link>
+  <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+  <author>作者</author>
+  <guid>https://huuuuuuo.github.io/blog/posts/content-placeholder/</guid>
+  <description><![CDATA[sad]]></description>
+</item>
+<item>
+  <title>hhhhsad是多少r</title>
+  <link>https://huuuuuuo.github.io/blog/posts/hhhhsad%E6%98%AF%E5%A4%9A%E5%B0%91r/</link>
+  <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+  <author>作者</author>
+  <guid>https://huuuuuuo.github.io/blog/posts/hhhhsad%E6%98%AF%E5%A4%9A%E5%B0%91r/</guid>
+  <description><![CDATA[实打实]]></description>
+</item>
+</channel>
+</rss>
